@@ -27,7 +27,7 @@ jobs:
         REPOSITORY_USERNAME: ${{ secrets.REPOSITORY_USERNAME }}
         REPOSITORY_PASSWORD: ${{ secrets.REPOSITORY_PASSWORD }}
       run: ./gradlew build jar
-    - name: Build
+    - name: Publish
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: ./gradlew publish
